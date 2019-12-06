@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+    <div class="col-12 text-center">
+    <h2>Generate a Password</h2>
+    </div>
+<div class="col-12 form-group">
+    <label for="password_length">Password Length:</label>
+        <input class="form-control" type="number" id="password_length" min="8" max="128">
+</div>
+<div class="col-12 form-group">
+    <label for="password_type">Password Type:</label>
+        <input type="checkbox" value="numeric" class="password_type">Numeric characters
+        <input type="checkbox" value="special" class="password_type">Special characters
+        <input type="checkbox" value="lower" class="password_type">Lower characters
+        <input type="checkbox" value="upper" class="password_type">Upper characters
+</div>    
+    <div class="col-12 form-group">
+    <textarea class="form-control" readonly id="password" placeholder="Your Secure Password">
+    </textarea>
+    </div>
+        <div class="col-12 form-group">
+            <label for="generate">Press to generate a password</label>
+            <button id="generate" class="btn btn-block btn-primary">Generate Password</button>
+        </div>
+        <div class="col-12 form-group">
+            <label for="generate">Press to copy to clipboard</label>
+    <button id="copy" class="btn btn-block btn-primary">
+      Copy to Clipboard
+    </button>
+        </div>
+    </div>
+</div>
+    <script src="password.js"></script>
+  </body>
+</html>
